@@ -1,0 +1,25 @@
+.countdown, .countdown-block{
+    text-align: right;
+}
+
+.flip-clock{
+    text-align: right!important;
+}
+
+body{
+    background-image: url('../assets/ehimetalor-akhere-unuabona-TvJk52iLxQA-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+input{
+    width: 17%;
+    height: 30px;
+}
+
+.btn{
+    height: 30px;
+    background-color: orange;
+    color: #fff;
+}
