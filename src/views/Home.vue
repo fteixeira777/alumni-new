@@ -67,12 +67,10 @@ export default {
             <div class="center">
                 <CountDown labelColor="#fff" mainColor="orange" deadline="2022-09-24 00:00:00"></CountDown>
             </div>
-            <div class="form">
-                <label for="email">Stay Connected! Leave your email.</label>
-            </div>
             <form @submit.prevent="storeSubscriber">
             <div class="form-group">
                 <div class="form">
+                    <label for="email">Stay Connected! Leave your email.</label>
                     <input name="email" v-model="email" placeholder="Email" type="email" required/>
                 </div>
                 <div class="form">

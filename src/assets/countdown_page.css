@@ -23,3 +23,44 @@ input{
     background-color: orange;
     color: #fff;
 }
+
+
+@media (max-width: 768px){
+    body{
+        background-image: url('../assets/ehimetalor-akhere-unuabona-TvJk52iLxQA-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-size: initial;
+        color: white;
+        background-position: center;
+    }
+
+    .countdown, .countdown-block{
+        text-align: center;
+    }
+    
+    .flip-clock{
+        text-align: center!important;
+    }
+
+    input{
+        width: 50%;
+        height: 30px;
+        margin-top: 10px;
+    }
+
+    .btn{
+        height: 40px;
+        background-color: orange;
+        color: #fff;
+        width: 25%;
+        margin-top: 10px;
+    }
+
+    .form-group{
+        padding-top: 35px;
+    }
+
+    .form label{
+        font-weight: bold;
+    }
+}
