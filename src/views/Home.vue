@@ -100,7 +100,7 @@ export default {
                       <input name="email" v-model="email" placeholder="Email" type="email" required class="normal-input"/>
                     </div>
                     <div style="padding-top:15px">
-                      <input name="ano_matricula" v-model="ano_matricula" placeholder="Year of Enrollment" type="text" class="normal-input"/>
+                      <input name="ano_matricula" v-model="ano_matricula" placeholder="Year of Enrollment" type="number" min="1990" max="2022" class="normal-input"/>
                     </div>
                     <div style="padding-top:15px">
                       <input name="phone" v-model="phone" placeholder="Phone" type="text" class="normal-input"/>
