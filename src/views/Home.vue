@@ -20,9 +20,9 @@ export default {
     const name = ref("")
     const ano_matricula = ref("")
     const phone = ref("")
-    const karting = ref(0)
-    const lasergame = ref(0)
-    const shirt = ref(0)
+    const karting = ref("")
+    const lasergame = ref("")
+    const shirt = ref("")
     const size = ref("")
     const suggestions = ref("")
 
@@ -110,20 +110,41 @@ export default {
                     </div>
                     <div style="padding-top:15px">
                       <label for="shirt"><strong>Will you want a t-shirt?</strong></label>
-                      <input name="shirt" v-model="shirt" placeholder="shirt" type="checkbox" class="input-checkbox"/>
+                      <!--<input name="shirt" v-model="shirt" placeholder="shirt" type="checkbox" class="input-checkbox"/>-->
+                      <div>
+                        <select v-model="shirt" name="shirt" required style="margin-left:10px" class="normal-input">
+                          <option value="" selected disabled>Select an option...</option>
+                          <option value="1">Yes</option>
+                          <option value="0">No</option>
+                        </select>
+                      </div>
                     </div>
-                    <div v-if="shirt">
+                    <div v-if="shirt == '1'" style="padding-top:15px">
                       <input name="size" v-model="size" placeholder="Size" type="text" class="normal-input" required/>
                     </div>
 
                     <h3>Activities</h3>
                     <div>
                       <label for="karting"><strong>Karting</strong></label>
-                      <input name="karting" v-model="karting" placeholder="Karting" type="checkbox" class="input-checkbox"/>
+                      <div>
+                        <select v-model="karting" required class="normal-input">
+                          <option value="" selected disabled>Select an option...</option>
+                          <option value="1">Yes</option>
+                          <option value="0">No</option>
+                        </select>
+                      </div>
+                      <!--<input name="karting" v-model="karting" placeholder="Karting" type="checkbox" class="input-checkbox"/>-->
                     </div>
                     <div>
                       <label for="lasergame"><strong>Lasergame</strong></label>
-                      <input name="lasergame" v-model="lasergame" placeholder="Lasergame" type="checkbox" class="input-checkbox"/>
+                      <div>
+                        <select v-model="lasergame" required class="normal-input">
+                          <option value="" selected disabled>Select an option...</option>
+                          <option value="1">Yes</option>
+                          <option value="0">No</option>
+                        </select>
+                      </div>
+                      <!--<input name="lasergame" v-model="lasergame" placeholder="Lasergame" type="checkbox" class="input-checkbox"/>-->
                     </div>
 
                     <div style="padding-top:15px">
@@ -132,6 +153,12 @@ export default {
                 </div>
                 <div class="form" style="padding-top:15px">
                     <button type="submit" class="btn">Submit</button>
+                </div>
+
+                <div class="whatsapp">
+                  <a style="color:orange" href="https://chat.whatsapp.com/H7sJ9gyHfHH5YbhfLQ72Ww" target="_blank">
+                    <img src="../assets/whatsapp.png" width="100%"/>
+                  </a>
                 </div>
             </div>
             </form>

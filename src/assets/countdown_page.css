@@ -25,6 +25,13 @@ body{
     vertical-align: middle;
 }
 
+.whatsapp{
+    position: fixed;
+    left: 0;
+    bottom: 50px;
+    width: 50px;
+}
+
 .btn{
     height: 30px;
     background-color: orange;
