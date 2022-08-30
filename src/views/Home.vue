@@ -135,7 +135,7 @@ export default {
                       </div>
                       <!--<input name="karting" v-model="karting" placeholder="Karting" type="checkbox" class="input-checkbox"/>-->
                     </div>
-                    <div>
+                    <div style="padding-top:15px">
                       <label for="lasergame"><strong>Lasergame</strong></label>
                       <div>
                         <select v-model="lasergame" required class="normal-input">
