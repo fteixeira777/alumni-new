@@ -24,6 +24,7 @@ export default {
     const lasergame = ref(0)
     const shirt = ref(0)
     const size = ref("")
+    const suggestions = ref("")
 
 
     async function storeSubscriber() {
@@ -39,6 +40,7 @@ export default {
           lasergame: lasergame.value,
           shirt: shirt.value,
           size: size.value,
+          suggestions: suggestions.value,
           inserted_at: new Date(),
         }
 
@@ -69,6 +71,7 @@ export default {
       lasergame,
       shirt,
       size,
+      suggestions,
       storeSubscriber
     }
   },
@@ -121,6 +124,10 @@ export default {
                     <div>
                       <label for="lasergame"><strong>Lasergame</strong></label>
                       <input name="lasergame" v-model="lasergame" placeholder="Lasergame" type="checkbox" class="input-checkbox"/>
+                    </div>
+
+                    <div style="padding-top:15px">
+                      <textarea name="suggestions" id="suggestions" placeholder="Suggestions" v-model="suggestions" cols="30" rows="10" class="normal-input"></textarea>
                     </div>
                 </div>
                 <div class="form" style="padding-top:15px">
