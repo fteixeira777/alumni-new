@@ -22,6 +22,8 @@ export default {
     const phone = ref("")
     const karting = ref(0)
     const lasergame = ref(0)
+    const shirt = ref(0)
+    const size = ref("")
 
 
     async function storeSubscriber() {
@@ -35,6 +37,8 @@ export default {
           phone: phone.value,
           karting: karting.value,
           lasergame: lasergame.value,
+          shirt: shirt.value,
+          size: size.value,
           inserted_at: new Date(),
         }
 
@@ -63,6 +67,8 @@ export default {
       phone,
       karting,
       lasergame,
+      shirt,
+      size,
       storeSubscriber
     }
   },
@@ -99,14 +105,21 @@ export default {
                     <div style="padding-top:15px">
                       <input name="phone" v-model="phone" placeholder="Phone" type="text" class="normal-input"/>
                     </div>
+                    <div style="padding-top:15px">
+                      <label for="shirt"><strong>Will you want a t-shirt?</strong></label>
+                      <input name="shirt" v-model="shirt" placeholder="shirt" type="checkbox" class="input-checkbox"/>
+                    </div>
+                    <div v-if="shirt">
+                      <input name="size" v-model="size" placeholder="Size" type="text" class="normal-input" required/>
+                    </div>
 
                     <h3>Activities</h3>
                     <div>
-                      <label for="karting">Karting</label>
+                      <label for="karting"><strong>Karting</strong></label>
                       <input name="karting" v-model="karting" placeholder="Karting" type="checkbox" class="input-checkbox"/>
                     </div>
                     <div>
-                      <label for="lasergame">Lasergame</label>
+                      <label for="lasergame"><strong>Lasergame</strong></label>
                       <input name="lasergame" v-model="lasergame" placeholder="Lasergame" type="checkbox" class="input-checkbox"/>
                     </div>
                 </div>
