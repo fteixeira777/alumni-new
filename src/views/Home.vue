@@ -18,6 +18,10 @@ export default {
     const loading = ref(true)
     const email = ref("")
     const name = ref("")
+    const ano_matricula = ref("")
+    const phone = ref("")
+    const karting = ref(0)
+    const lasergame = ref(0)
 
 
     async function storeSubscriber() {
@@ -27,6 +31,10 @@ export default {
         const updates = {
           email: email.value,
           name: name.value,
+          ano_matricula: ano_matricula.value,
+          phone: phone.value,
+          karting: karting.value,
+          lasergame: lasergame.value,
           inserted_at: new Date(),
         }
 
@@ -51,6 +59,10 @@ export default {
     return {
       email,
       name,
+      ano_matricula,
+      phone,
+      karting,
+      lasergame,
       storeSubscriber
     }
   },
@@ -76,10 +88,26 @@ export default {
                     <h1>Make your pre-registration</h1>
 
                     <div>
-                      <input name="name" v-model="name" placeholder="Name" type="text" required/>
+                      <input name="name" v-model="name" placeholder="Name" type="text" required class="normal-input"/>
                     </div>
                     <div style="padding-top:15px">
-                      <input name="email" v-model="email" placeholder="Email" type="email" required/>
+                      <input name="email" v-model="email" placeholder="Email" type="email" required class="normal-input"/>
+                    </div>
+                    <div style="padding-top:15px">
+                      <input name="ano_matricula" v-model="ano_matricula" placeholder="Year of Enrollment" type="text" class="normal-input"/>
+                    </div>
+                    <div style="padding-top:15px">
+                      <input name="phone" v-model="phone" placeholder="Phone" type="text" class="normal-input"/>
+                    </div>
+
+                    <h3>Activities</h3>
+                    <div>
+                      <label for="karting">Karting</label>
+                      <input name="karting" v-model="karting" placeholder="Karting" type="checkbox" class="input-checkbox"/>
+                    </div>
+                    <div>
+                      <label for="lasergame">Lasergame</label>
+                      <input name="lasergame" v-model="lasergame" placeholder="Lasergame" type="checkbox" class="input-checkbox"/>
                     </div>
                 </div>
                 <div class="form" style="padding-top:15px">
