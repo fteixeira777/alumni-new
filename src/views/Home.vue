@@ -17,6 +17,7 @@ export default {
   setup() {
     const loading = ref(true)
     const email = ref("")
+    const name = ref("")
 
 
     async function storeSubscriber() {
@@ -25,10 +26,11 @@ export default {
 
         const updates = {
           email: email.value,
+          name: name.value,
           inserted_at: new Date(),
         }
 
-        let { error } = await supabase.from("subscribers").upsert(updates, {
+        let { error } = await supabase.from("pre-register").upsert(updates, {
           returning: "minimal", // Don't return the value after inserting
         })
 
@@ -48,6 +50,7 @@ export default {
 
     return {
       email,
+      name,
       storeSubscriber
     }
   },
@@ -70,10 +73,16 @@ export default {
             <form @submit.prevent="storeSubscriber">
             <div class="form-group">
                 <div class="form">
-                    <label for="email">Stay Connected! Leave your email.</label>
-                    <input name="email" v-model="email" placeholder="Email" type="email" required/>
+                    <h1>Make your pre-registration</h1>
+
+                    <div>
+                      <input name="name" v-model="name" placeholder="Name" type="text" required/>
+                    </div>
+                    <div style="padding-top:15px">
+                      <input name="email" v-model="email" placeholder="Email" type="email" required/>
+                    </div>
                 </div>
-                <div class="form">
+                <div class="form" style="padding-top:15px">
                     <button type="submit" class="btn">Submit</button>
                 </div>
             </div>
