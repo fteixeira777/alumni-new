@@ -25,6 +25,8 @@ export default {
     const shirt = ref("")
     const size = ref("")
     const suggestions = ref("")
+    const family = ref("")
+    const family_number = ref("")
 
 
     async function storeSubscriber() {
@@ -41,6 +43,8 @@ export default {
           shirt: shirt.value,
           size: size.value,
           suggestions: suggestions.value,
+          family: family.value,
+          family_number: family_number.value,
           inserted_at: new Date(),
         }
 
@@ -76,6 +80,8 @@ export default {
       shirt,
       size,
       suggestions,
+      family,
+      family_number,
       storeSubscriber
     }
   },
@@ -126,6 +132,32 @@ export default {
                     <div v-if="shirt == '1'" style="padding-top:15px">
                       <input name="size" v-model="size" placeholder="Size" type="text" class="normal-input" required/>
                     </div>
+
+
+
+                    <div style="padding-top:15px">
+                      <label for="family"><strong>With Family?</strong></label>
+                      <!--<input name="shirt" v-model="shirt" placeholder="shirt" type="checkbox" class="input-checkbox"/>-->
+                      <div>
+                        <select v-model="family" name="family" required style="margin-left:10px" class="normal-input">
+                          <option value="" selected disabled>Select an option...</option>
+                          <option value="1">Yes</option>
+                          <option value="0">No</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div v-if="family == '1'" style="padding-top:15px">
+                      <select v-model="family_number" required class="normal-input">
+                          <option value="" selected disabled>Number of elements...</option>
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                    </div>
+
 
                     <h3>Activities</h3>
                     <div>
