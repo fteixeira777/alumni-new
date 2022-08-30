@@ -56,7 +56,11 @@ export default {
         }
       } catch (error) {
         //alert(error.message)
-        notify({ type: "error", text: error.details });
+        if(error.code == "23505"){
+          notify({ type: "error", text: "Your email is already registered" });
+        } else {
+          notify({ type: "error", text: "Something went wrong! Please try again later" });
+        }
       } finally {
         loading.value = false
       }
