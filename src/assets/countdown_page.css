@@ -36,9 +36,11 @@ body{
     height: 30px;
     background-color: orange;
     color: #fff;
-    width: 100px;
+    width: 180px;
     border-radius: 5px;
+    font-weight: bold;
 }
+
 
 
 @media (max-width: 768px){
@@ -75,9 +77,10 @@ body{
         height: 40px;
         background-color: orange;
         color: #fff;
-        width: 25%;
+        width: 35%;
         margin-top: 10px;
         border-radius: 5px;
+        font-weight: bold;
     }
 
     .form-group{

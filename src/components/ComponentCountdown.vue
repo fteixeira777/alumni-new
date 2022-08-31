@@ -1,12 +1,11 @@
 <template>
   <main>
     <div class="countdown-block">
-        <MyCountdown deadline="2022-09-24 00:00:00" labelColor="orange"></MyCountdown>
+        <MyCountdown deadline="2022-09-24 00:00:00" labelColor="orange" :labels="{days: 'Dias',hours: 'Horas',minutes: 'Minutos',seconds: 'Segundos'}"></MyCountdown>
     </div>
     <div id="Content" class="wrapper">
         <div class="countdown styled"></div>
-        <h2 class="intro">We're working hard to create something special!</h2>
-        <h3 class="intro">September 24, 2022</h3>
+        <h3 class="intro">24 de Setembro de 2022</h3>
     </div>
   </main>
 </template>

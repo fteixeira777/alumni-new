@@ -56,14 +56,14 @@ export default {
             //notify({ type: "error", text: error.details });
             throw error
         } else {
-            notify({ type: "success", text: 'Thank you! You are now connected.' });
+            notify({ type: "success", text: 'Obrigado pelo teu interesse!' });
         }
       } catch (error) {
         //alert(error.message)
         if(error.code == "23505"){
-          notify({ type: "error", text: "Your email is already registered" });
+          notify({ type: "error", text: "O teu email já está registado." });
         } else {
-          notify({ type: "error", text: "Something went wrong! Please try again later" });
+          notify({ type: "error", text: "Ocorreu um erro! Por favor tenta novamente mais tarde." });
         }
       } finally {
         loading.value = false
@@ -104,28 +104,28 @@ export default {
             <form @submit.prevent="storeSubscriber">
             <div class="form-group">
                 <div class="form">
-                    <h1>Make your pre-registration</h1>
+                    <h1>Faz a tua pré-inscrição</h1>
 
                     <div>
-                      <input name="name" v-model="name" placeholder="Name" type="text" required class="normal-input"/>
+                      <input name="name" v-model="name" placeholder="Nome" type="text" required class="normal-input"/>
                     </div>
                     <div style="padding-top:15px">
                       <input name="email" v-model="email" placeholder="Email" type="email" required class="normal-input"/>
                     </div>
                     <div style="padding-top:15px">
-                      <input name="ano_matricula" v-model="ano_matricula" placeholder="Year of Enrollment" type="number" min="1990" max="2022" class="normal-input"/>
+                      <input name="ano_matricula" v-model="ano_matricula" placeholder="Ano da 1ª matrícula" type="number" min="1990" max="2022" class="normal-input"/>
                     </div>
                     <div style="padding-top:15px">
-                      <input name="phone" v-model="phone" placeholder="Phone" type="text" class="normal-input"/>
+                      <input name="phone" v-model="phone" placeholder="Telemóvel" type="text" class="normal-input"/>
                     </div>
                     <div style="padding-top:15px">
-                      <label for="shirt"><strong>Will you want a t-shirt?</strong></label>
+                      <label for="shirt"><strong>Vais querer comprar t-shirt?</strong></label>
                       <!--<input name="shirt" v-model="shirt" placeholder="shirt" type="checkbox" class="input-checkbox"/>-->
                       <div>
                         <select v-model="shirt" name="shirt" required style="margin-left:10px" class="normal-input">
-                          <option value="" selected disabled>Select an option...</option>
-                          <option value="1">Yes</option>
-                          <option value="0">No</option>
+                          <option value="" selected disabled>Seleciona uma opção...</option>
+                          <option value="1">Sim</option>
+                          <option value="0">Não</option>
                         </select>
                       </div>
                     </div>
@@ -136,20 +136,19 @@ export default {
 
 
                     <div style="padding-top:15px">
-                      <label for="family"><strong>With Family?</strong></label>
+                      <label for="family"><strong>Vens com familiares?</strong></label>
                       <!--<input name="shirt" v-model="shirt" placeholder="shirt" type="checkbox" class="input-checkbox"/>-->
                       <div>
                         <select v-model="family" name="family" required style="margin-left:10px" class="normal-input">
-                          <option value="" selected disabled>Select an option...</option>
-                          <option value="1">Yes</option>
-                          <option value="0">No</option>
+                          <option value="" selected disabled>Seleciona uma opção...</option>
+                          <option value="1">Sim</option>
+                          <option value="0">Não</option>
                         </select>
                       </div>
                     </div>
                     <div v-if="family == '1'" style="padding-top:15px">
                       <select v-model="family_number" required class="normal-input">
-                          <option value="" selected disabled>Number of elements...</option>
-                          <option value="0">0</option>
+                          <option value="" selected disabled>Número de elementos...</option>
                           <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
@@ -159,14 +158,14 @@ export default {
                     </div>
 
 
-                    <h3>Activities</h3>
+                    <h3>Atividades</h3>
                     <div>
                       <label for="karting"><strong>Karting</strong></label>
                       <div>
                         <select v-model="karting" required class="normal-input">
-                          <option value="" selected disabled>Select an option...</option>
-                          <option value="1">Yes</option>
-                          <option value="0">No</option>
+                          <option value="" selected disabled>Seleciona uma opção...</option>
+                          <option value="1">Sim</option>
+                          <option value="0">Não</option>
                         </select>
                       </div>
                       <!--<input name="karting" v-model="karting" placeholder="Karting" type="checkbox" class="input-checkbox"/>-->
@@ -175,20 +174,20 @@ export default {
                       <label for="lasergame"><strong>Lasergame</strong></label>
                       <div>
                         <select v-model="lasergame" required class="normal-input">
-                          <option value="" selected disabled>Select an option...</option>
-                          <option value="1">Yes</option>
-                          <option value="0">No</option>
+                          <option value="" selected disabled>Seleciona uma opção...</option>
+                          <option value="1">Sim</option>
+                          <option value="0">Não</option>
                         </select>
                       </div>
                       <!--<input name="lasergame" v-model="lasergame" placeholder="Lasergame" type="checkbox" class="input-checkbox"/>-->
                     </div>
 
                     <div style="padding-top:15px">
-                      <textarea name="suggestions" id="suggestions" placeholder="Suggestions" v-model="suggestions" cols="30" rows="10" class="normal-input"></textarea>
+                      <textarea name="suggestions" id="suggestions" placeholder="Sugestões" v-model="suggestions" cols="30" rows="10" class="normal-input"></textarea>
                     </div>
                 </div>
                 <div class="form" style="padding-top:15px">
-                    <button type="submit" class="btn">Submit</button>
+                    <button type="submit" class="btn">Submeter pré-inscrição</button>
                 </div>
 
                 <div class="whatsapp">
