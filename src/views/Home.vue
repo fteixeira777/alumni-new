@@ -26,7 +26,7 @@ export default {
     const size = ref("")
     const suggestions = ref("")
     const family = ref("")
-    const family_number = ref("")
+    const family_number = ref(0)
 
 
     async function storeSubscriber() {
