@@ -130,7 +130,7 @@ export default {
                       </div>
                     </div>
                     <div v-if="shirt == '1'" style="padding-top:15px">
-                      <input name="size" v-model="size" placeholder="Size" type="text" class="normal-input" required/>
+                      <input name="size" v-model="size" placeholder="Tamanho" type="text" class="normal-input" required/>
                     </div>
 
 
@@ -148,8 +148,7 @@ export default {
                     </div>
                     <div v-if="family == '1'" style="padding-top:15px">
                       <select v-model="family_number" required class="normal-input">
-                          <option value="" selected disabled>Número de elementos...</option>
-                          <option value="1">1</option>
+                          <option value="1" selected>1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
                           <option value="4">4</option>
