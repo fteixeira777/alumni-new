@@ -1,22 +1,38 @@
+#app{
+    color: #000;
+}
+
 .countdown, .countdown-block{
-    text-align: right;
+    text-align: left;
+}
+
+.countdown{
+    padding-top: 20px;
+}
+
+.intro{
+    padding: 30px;
 }
 
 .flip-clock{
-    text-align: right!important;
+    text-align: center!important;
 }
 
 body{
-    background-image: url('../assets/ehimetalor-akhere-unuabona-TvJk52iLxQA-unsplash.jpg');
+    /*background-image: url('../assets/ehimetalor-akhere-unuabona-TvJk52iLxQA-unsplash.jpg');*/
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
+    color: #000;
+}
+
+.card{
+    color: #000;
 }
 
 .normal-input{
-    width: 17%;
+    width: 100%;
     height: 30px;
-    border: 1px solid #fff;
+    border: 1px solid #000;
     border-radius: 5px;
 }
 
@@ -27,35 +43,35 @@ body{
 
 .whatsapp{
     position: fixed;
-    left: 0;
+    right: 0;
     bottom: 50px;
     width: 50px;
 }
 
-.btn{
+/*.btn{
     height: 30px;
     background-color: orange;
     color: #fff;
     width: 180px;
     border-radius: 5px;
     font-weight: bold;
-}
+}*/
 
 
 
 @media (max-width: 768px){
     body{
-        background-image: url('../assets/ehimetalor-akhere-unuabona-TvJk52iLxQA-unsplash.jpg');
+        /*background-image: url('../assets/ehimetalor-akhere-unuabona-TvJk52iLxQA-unsplash.jpg');*/
         background-repeat: no-repeat;
         background-size: initial;
-        color: white;
+        color: #000;
         background-position: center;
     }
 
     .countdown, .countdown-block{
-        text-align: center;
+        text-align: left;
     }
-    
+
     .flip-clock{
         text-align: center!important;
     }
@@ -64,7 +80,7 @@ body{
         width: 50%;
         height: 30px;
         margin-top: 10px;
-        border: 1px solid #fff;
+        border: 1px solid #000;
         border-radius: 5px;
     }
 
@@ -73,7 +89,7 @@ body{
         vertical-align: middle;
     }
 
-    .btn{
+    /*.btn{
         height: 40px;
         background-color: orange;
         color: #fff;
@@ -81,7 +97,7 @@ body{
         margin-top: 10px;
         border-radius: 5px;
         font-weight: bold;
-    }
+    }*/
 
     .form-group{
         padding-top: 35px;
