@@ -128,7 +128,7 @@ export default {
         <div class="row">
           <div class="col-12">
             <figure class="figure">
-              <img src="../assets/programa.jpeg" class="figure-img img-fluid rounded" alt="programa">
+              <img src="../assets/anuncio.jpeg" class="figure-img img-fluid rounded" alt="anuncio">
             </figure>
           </div>
         </div>
